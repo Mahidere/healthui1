@@ -118,58 +118,60 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Expanded(
-              child: ClipRRect(
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25)),
-                child: Container(
-                  color: Colors.grey[200],
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 25.0, right: 25, top: 35, bottom: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const [
-                            Text(
-                              "Excercises",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
-                            Icon(Icons.more_horiz)
-                          ],
-                        ),
-                      ),
-                      Padding(
+              child: SingleChildScrollView(
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(25),
+                      topRight: Radius.circular(25)),
+                  child: Container(
+                    color: Colors.grey[200],
+                    child: Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.only(
-                            left: 40,
-                            right: 40,
-                            top: 20,
-                          ),
-                          child: Column(
+                              left: 25.0, right: 25, top: 35, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
-                              ExcercisesList(
-                                logoicon: Icons.favorite,
-                                title: "Speaking skills",
-                                subtitle: "16 excercises",
-                                backgroundcolor: Colors.orange,
+                              Text(
+                                "Excercises",
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
                               ),
-                              ExcercisesList(
-                                  logoicon: Icons.person,
-                                  title: "Reading speed",
-                                  subtitle: "8 excercises"),
-                              ExcercisesList(
-                                  logoicon: Icons.person,
-                                  title: "Reading speed",
-                                  subtitle: "8 excercises"),
-                              ExcercisesList(
-                                  logoicon: Icons.person,
-                                  title: "Reading speed",
-                                  subtitle: "8 excercises"),
+                              Icon(Icons.more_horiz)
                             ],
-                          )),
-                    ],
+                          ),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(
+                              left: 40,
+                              right: 40,
+                              top: 20,
+                            ),
+                            child: Column(
+                              children: const [
+                                ExcercisesList(
+                                  logoicon: Icons.favorite,
+                                  title: "Speaking skills",
+                                  subtitle: "16 excercises",
+                                  backgroundcolor: Colors.orange,
+                                ),
+                                ExcercisesList(
+                                    logoicon: Icons.person,
+                                    title: "Reading speed",
+                                    subtitle: "8 excercises"),
+                                ExcercisesList(
+                                    logoicon: Icons.person,
+                                    title: "Reading speed",
+                                    subtitle: "8 excercises"),
+                                ExcercisesList(
+                                    logoicon: Icons.person,
+                                    title: "Reading speed",
+                                    subtitle: "8 excercises"),
+                              ],
+                            )),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -177,6 +179,11 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+      ]),
     );
   }
 }
