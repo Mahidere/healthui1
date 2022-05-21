@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:healthui1/widget/category_widget.dart';
+import 'package:healthui1/widget/consultant_list.dart';
 
-import '../widget/excercises_list.dart';
 import '../widget/icon_widget.dart';
 
 class Dashboard extends StatefulWidget {
@@ -110,28 +111,39 @@ class _DashboardState extends State<Dashboard> {
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 40, right: 40, top: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          child: Column(
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(12)),
-                                padding: const EdgeInsets.all(28),
-                                child: const Text('Relationship'),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  CategoryWidget(
+                                    text: "Relationship",
+                                    backgroundColor: Colors.purple,
+                                  ),
+                                  CategoryWidget(text: "Career")
+                                ],
                               ),
-                              Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(12)),
-                                padding: const EdgeInsets.all(28),
-                                child: const Text('Relationship'),
-                              )
+                              const SizedBox(height: 15),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  CategoryWidget(
+                                    text: "Education",
+                                    backgroundColor: Colors.orange,
+                                  ),
+                                  CategoryWidget(
+                                    text: "Other",
+                                    backgroundColor: Colors.red,
+                                  )
+                                ],
+                              ),
                             ],
                           ),
                         ),
 
-                        //Excercise
+                        //Consultant
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25, top: 35, bottom: 10),
@@ -139,7 +151,7 @@ class _DashboardState extends State<Dashboard> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: const [
                               Text(
-                                "Excercises",
+                                "Consultant",
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
@@ -155,24 +167,36 @@ class _DashboardState extends State<Dashboard> {
                             ),
                             child: Column(
                               children: const [
-                                ExcercisesList(
+                                ConsultantList(
                                   logoicon: Icons.favorite,
                                   title: "Speaking skills",
                                   subtitle: "16 excercises",
                                   backgroundcolor: Colors.orange,
                                 ),
-                                ExcercisesList(
-                                    logoicon: Icons.person,
-                                    title: "Reading speed",
-                                    subtitle: "8 excercises"),
-                                ExcercisesList(
-                                    logoicon: Icons.person,
-                                    title: "Reading speed",
-                                    subtitle: "8 excercises"),
-                                ExcercisesList(
-                                    logoicon: Icons.person,
-                                    title: "Reading speed",
-                                    subtitle: "8 excercises"),
+                                ConsultantList(
+                                  logoicon: Icons.favorite,
+                                  title: "Speaking skills",
+                                  subtitle: "16 excercises",
+                                  backgroundcolor: Colors.orange,
+                                ),
+                                ConsultantList(
+                                  logoicon: Icons.favorite,
+                                  title: "Speaking skills",
+                                  subtitle: "16 excercises",
+                                  backgroundcolor: Colors.orange,
+                                ),
+                                ConsultantList(
+                                  logoicon: Icons.favorite,
+                                  title: "Speaking skills",
+                                  subtitle: "16 excercises",
+                                  backgroundcolor: Colors.orange,
+                                ),
+                                ConsultantList(
+                                  logoicon: Icons.favorite,
+                                  title: "Speaking skills",
+                                  subtitle: "16 excercises",
+                                  backgroundcolor: Colors.orange,
+                                ),
                               ],
                             )),
                       ],
