@@ -165,39 +165,42 @@ class _DashboardState extends State<Dashboard> {
                               right: 40,
                               top: 20,
                             ),
-                            child: Column(
-                              children: const [
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                              ],
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: Column(
+                                children: const [
+                                  ConsultantList(
+                                    logoicon: Icons.favorite,
+                                    title: "Speaking skills",
+                                    subtitle: "16 excercises",
+                                    backgroundcolor: Colors.orange,
+                                  ),
+                                  ConsultantList(
+                                    logoicon: Icons.favorite,
+                                    title: "Speaking skills",
+                                    subtitle: "16 excercises",
+                                    backgroundcolor: Colors.orange,
+                                  ),
+                                  ConsultantList(
+                                    logoicon: Icons.favorite,
+                                    title: "Speaking skills",
+                                    subtitle: "16 excercises",
+                                    backgroundcolor: Colors.orange,
+                                  ),
+                                  ConsultantList(
+                                    logoicon: Icons.favorite,
+                                    title: "Speaking skills",
+                                    subtitle: "16 excercises",
+                                    backgroundcolor: Colors.orange,
+                                  ),
+                                  ConsultantList(
+                                    logoicon: Icons.favorite,
+                                    title: "Speaking skills",
+                                    subtitle: "16 excercises",
+                                    backgroundcolor: Colors.orange,
+                                  ),
+                                ],
+                              ),
                             )),
                       ],
                     ),

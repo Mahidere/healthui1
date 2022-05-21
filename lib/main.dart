@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:healthui1/pages/main_page.dart';
+import 'package:healthui1/pages/indevidual_message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: MainPage());
+        debugShowCheckedModeBanner: false, home: IndevidualMessage());
   }
 }

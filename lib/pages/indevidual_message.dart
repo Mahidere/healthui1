@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:healthui1/widget/message_recieve_widget.dart';
+import 'package:healthui1/widget/message_send_widget.dart';
 
-import '../widget/category_widget.dart';
-import '../widget/consultant_list.dart';
 import '../widget/icon_widget.dart';
 
 class IndevidualMessage extends StatefulWidget {
@@ -26,56 +26,32 @@ class _IndevidualMessageState extends State<IndevidualMessage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      const IconWidget(icon: Icons.arrow_back),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           const Text(
-                            "Hi, Mahdere!",
+                            "Bobby Singer",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 24,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 5),
                           Text(
-                            "22 Sep, 2022",
+                            "online",
                             style: TextStyle(
-                                color: Colors.blue[200], fontSize: 16),
+                                color: Colors.blue[200], fontSize: 14),
                           )
                         ],
                       ),
-                      const IconWidget(icon: Icons.notifications)
+                      const IconWidget(icon: Icons.call)
                     ],
                   ),
 
                   //Searchbar
 
-                  Padding(
-                      padding: const EdgeInsets.only(top: 30),
-                      child: Container(
-                          padding: const EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(12.0)),
-                          child: const Center(
-                            child: TextField(
-                              textInputAction: TextInputAction.search,
-                              style: TextStyle(color: Colors.white),
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                prefixIcon: Icon(
-                                  Icons.search,
-                                  color: Colors.white,
-                                  size: 30,
-                                ),
-                                hintText: "Search",
-                                hintStyle: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ))),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 10),
 
                   //How do you feel
                 ],
@@ -83,125 +59,52 @@ class _IndevidualMessageState extends State<IndevidualMessage> {
             ),
             Expanded(
               child: SingleChildScrollView(
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25)),
-                  child: Container(
-                    color: Colors.grey[200],
-                    child: Column(
-                      children: [
-                        //category
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 25.0, right: 25, top: 35, bottom: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
-                                "Category",
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                              Icon(Icons.more_horiz),
-                            ],
-                          ),
-                        ),
-
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 40, right: 40, top: 10),
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  CategoryWidget(
-                                    text: "Relationship",
-                                    backgroundColor: Colors.purple,
-                                  ),
-                                  CategoryWidget(text: "Career")
-                                ],
-                              ),
-                              const SizedBox(height: 15),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  CategoryWidget(
-                                    text: "Education",
-                                    backgroundColor: Colors.orange,
-                                  ),
-                                  CategoryWidget(
-                                    text: "Other",
-                                    backgroundColor: Colors.red,
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        //Consultant
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 25.0, right: 25, top: 35, bottom: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
-                                "Consultant",
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                              Icon(Icons.more_horiz),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.only(
-                              left: 40,
-                              right: 40,
-                              top: 20,
-                            ),
-                            child: Column(
-                              children: const [
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                                ConsultantList(
-                                  logoicon: Icons.favorite,
-                                  title: "Speaking skills",
-                                  subtitle: "16 excercises",
-                                  backgroundcolor: Colors.orange,
-                                ),
-                              ],
-                            )),
-                      ],
+                child: Column(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(25),
+                              topRight: Radius.circular(25))),
+                      width: double.maxFinite,
+                      child: Column(
+                        children: const [
+                          SizedBox(height: 30),
+                          //messages
+                          MessageRecieve(
+                              message: "Hi Jason! How are you?", time: "11:05"),
+                          MessageSent(
+                              message: "I'm good, Thanks! how are you",
+                              time: "1:02"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageSent(
+                              message: "Nah I am free, Why do you ask?",
+                              time: "12:01"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                          MessageRecieve(
+                              message: "I'm great, Are you free today?",
+                              time: "2:05"),
+                        ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
             )
