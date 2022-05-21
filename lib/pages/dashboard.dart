@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:healthui1/widget/emoticon_face.dart';
-import 'package:healthui1/widget/excercises_list.dart';
 
+import '../widget/excercises_list.dart';
 import '../widget/icon_widget.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,38 +74,9 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ))),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 15),
 
                   //How do you feel
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        "How do you feel?",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Icon(
-                        Icons.more_horiz,
-                        color: Colors.white,
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      EmoticonFace(emoticonFace: "😔", emoticonText: "Badly"),
-                      EmoticonFace(emoticonFace: "😊", emoticonText: "Fine"),
-                      EmoticonFace(emoticonFace: "😀", emoticonText: "Well"),
-                      EmoticonFace(
-                          emoticonFace: "😃", emoticonText: "Excellent"),
-                    ],
-                  ),
                 ],
               ),
             ),
@@ -120,6 +90,48 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.grey[200],
                     child: Column(
                       children: [
+                        //category
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 25.0, right: 25, top: 35, bottom: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const [
+                              Text(
+                                "Category",
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              Icon(Icons.more_horiz),
+                            ],
+                          ),
+                        ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 40, right: 40, top: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(12)),
+                                padding: const EdgeInsets.all(28),
+                                child: const Text('Relationship'),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(12)),
+                                padding: const EdgeInsets.all(28),
+                                child: const Text('Relationship'),
+                              )
+                            ],
+                          ),
+                        ),
+
+                        //Excercise
                         Padding(
                           padding: const EdgeInsets.only(
                               left: 25.0, right: 25, top: 35, bottom: 10),
@@ -131,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.bold),
                               ),
-                              Icon(Icons.more_horiz)
+                              Icon(Icons.more_horiz),
                             ],
                           ),
                         ),
