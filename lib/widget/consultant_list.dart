@@ -36,29 +36,32 @@ class ConsultantList extends StatelessWidget {
           ),
           SizedBox(
             width: 220,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    const Icon(Icons.more_horiz)
-                  ],
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  subtitle,
-                  style: const TextStyle(color: Colors.grey),
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(top: 18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        subtitle,
+                        style: const TextStyle(color: Colors.grey),
+                      )
+                    ],
+                  ),
+                  const Icon(Icons.more_horiz)
+                ],
+              ),
             ),
           )
         ],
